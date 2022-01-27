@@ -6,16 +6,32 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+.button {
+    text-decoration: none;
+    background-color: rgba(230, 47, 114, 0.877);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.button-text {
+    margin-right: 10px;
+    font-weight: 500;
+}
 
-/* Header-section styles */
+/*------------------------- 
+    Header-section styles
+---------------------------*/
 .header-section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-.top-container {
+/* Header-section common styles */
+.top-container, .top-banner-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-row-gap: 30px;
+    margin-bottom: 30px;
 }
 .menu-bar>ul {
     display: flex;
@@ -32,4 +48,29 @@ body {
 .menu-options a {
     text-decoration: none;
     color: black;
+}
+.top-banner-info h1 {
+    font-size: 2.5em;
+}
+.top-banner-info p {
+    font-weight: 500;
+}
+.top-banner-image {
+    margin-left: 30px;
+    background-image: url("../media/images/Circle design.svg");
+    background-repeat: no-repeat;
+}
+
+.ecommerce-section {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: flex-end;
+    align-items: center;
+    margin-top: 30px;
+    border: 2px solid whitesmoke;
+    box-shadow: rgba(230, 47, 114, 0.877);
+}
+.brand-logo {
+    margin: 0px 20px;
 }
