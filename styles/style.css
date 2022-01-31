@@ -143,3 +143,26 @@ main {
 .product-banner img {
     border-radius: 7px;
 }
+
+/*----------------- 
+    Footer Styles 
+-------------------*/
+footer {
+    background-color: #110d3a;
+    padding: 70px;
+}
+.footer-content {
+    text-align: center;
+}
+.footer-content h2 {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+.footer-info {
+    color: lightgrey;
+    font-weight: 500;
+}
+.social-media-links a {
+    color: whitesmoke;
+    margin-left: 10px;
+}
