@@ -6,7 +6,7 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-.button {
+.button, .explore-button{
     text-decoration: none;
     background-color: rgba(230, 47, 114, 0.877);
     color: white;
@@ -59,6 +59,11 @@ body {
     margin-left: 30px;
     background-image: url("../media/images/Circle design.svg");
     background-repeat: no-repeat;
+}
+/* Top banner image Transition */
+.top-banner-image:hover {
+  transform: rotate(360deg);
+  transition: rotate 4s;  
 }
 
 .ecommerce-section {
@@ -122,4 +127,19 @@ main {
 }
 .right-arrow {
     margin-left: 5px;
+}
+
+/*----------------------------- 
+    New product section styles 
+-------------------------------*/
+.new-product {
+    max-width: 1150px;
+    margin: 80px auto;
+}
+.new-product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.product-banner img {
+    border-radius: 7px;
 }
