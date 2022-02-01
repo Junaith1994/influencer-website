@@ -2,8 +2,13 @@
 /*------------------- 
     Common styles 
 ---------------------*/
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
+    margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 .button, .explore-button{
@@ -31,7 +36,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 30px;
-    margin-bottom: 30px;
 }
 .menu-bar>ul {
     display: flex;
@@ -49,6 +53,9 @@ body {
     text-decoration: none;
     color: black;
 }
+.top-banner-section {
+    margin-top: 30px;
+}
 .top-banner-info h1 {
     font-size: 2.5em;
 }
@@ -58,12 +65,13 @@ body {
 .top-banner-image {
     margin-left: 30px;
     background-image: url("../media/images/Circle design.svg");
+    background-size: contain;
     background-repeat: no-repeat;
 }
 /* Top banner image Transition */
 .top-banner-image:hover {
-  transform: rotate(360deg);
-  transition: rotate 4s;  
+  transform: rotate3d(0, 1, 0.5, 360deg);;
+  transition: linear 4s;
 }
 
 .ecommerce-section {
@@ -72,7 +80,7 @@ body {
     justify-items: center;
     align-content: flex-end;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 60px;
     padding: 20px;
     border-top: groove rgb(221, 208, 208);
     border-bottom: groove rgb(221, 208, 208);
@@ -103,6 +111,7 @@ main {
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 .product-image, .product-info {
+    margin-top: 15px;
     margin-left: 15px;
 }
 .price-tag {
@@ -164,5 +173,74 @@ footer {
 }
 .social-media-links a {
     color: whitesmoke;
-    margin-left: 10px;
+    margin-left: 15px;
+}
+
+/*------------------- 
+    Media Queries 
+---------------------*/
+
+/* For Mobile Devices */
+@media (max-width: 688px)  {
+    .header-section, .top-banner-info, main {
+        max-width: fit-content;
+    }
+    .menu-bar {
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+    .menu-bar ul {
+        flex-direction: column;
+        row-gap: 10px;
+        font-size: 1em;
+    }
+    .top-container {
+        grid-template-columns: 1fr;
+    }
+    .header-title, .top-banner-info, h1, p, .new-product-info {
+        text-align: center;
+    }
+    .top-banner-section, .product-container, .new-product-container {
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+        justify-content: center;
+        justify-items: center;
+    }
+    .top-banner-info h1 {
+        font-size: 1.4em;
+    }
+    .top-banner-image {
+        order: 1;
+        margin-top: 7em;
+        align-self: center;
+    }
+    .top-banner-info {
+        order: 2;
+    }
+    .ecommerce-section {
+        flex-wrap: wrap;
+    }
+
+    .product {
+        width: 345px;
+        height: 450px;
+    }
+    .product-banner {
+        order: 2;
+    }
+    .product-info p {
+        text-align: left;
+    }
+
+    .new-product-title {
+        font-size: 1.8em;
+    }
+
+    .footer-content h2 {
+        margin-bottom: 5px;
+    }
+    .footer-info {
+        margin-bottom: 10px;
+        line-height: 2em;
+    }
 }
